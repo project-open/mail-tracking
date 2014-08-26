@@ -66,6 +66,7 @@ ad_proc -public -callback acs_mail_lite::send -impl mail_tracking {
 } {
     create a new entry in the mail tracking table
 } {
+    ns_log Notice "acs_mail_lite::send -impl mail_tracking -package_id $package_id -from_party_id $from_party_id -to_party_id $to_party_id -message_id $message_id -subject $subject"
 
     set log_id [mail_tracking::new -package_id $package_id \
 		    -sender_id $from_party_id \
