@@ -26,7 +26,7 @@ ad_proc -public mail_tracking::display::request_widget {
     }
 
     #Check if we track already everything
-    set track_all_p [ad_parameter -package_id [apm_package_id_from_key [mail_tracking::package_key]] TrackAllMails "0"]
+    set track_all_p [im_parameter -package_id [apm_package_id_from_key [mail_tracking::package_key]] TrackAllMails "0"]
 
     if {$track_all_p} {
 	return ""
